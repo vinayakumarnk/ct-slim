@@ -25,6 +25,9 @@ class DbConnect{
                 if(mysqli_connect_errno()){
                     echo 'Failed to connect to MySQL '.mysqli_connect_error();
                 }
+                else{
+                    print_r('conn success');
+                }
                 
                 //returning connection resource
                 return $this->conn;
