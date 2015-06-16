@@ -9,19 +9,10 @@ class DbHandler{
     private $conn;
     
     function __construct() {
-        print_r('bfr inc');
         require_once dirname(__FILE__).'/DbConnect.php';
-        print_r('aftr inc');
         //opening db connection
         $db  =  new DbConnect();
         $this->conn = $db->connect();
-        if($this->conn){
-          print_r('conn success');
-        }
-        else{
-          print_r('conn fail');
-        }
-        
     }
     
     

@@ -11,7 +11,7 @@ $app = new \Slim\Slim();
 //register
 $app->post('/register', function() use ($app){
     
-//   print_r($_FILES);print_r($_POST);exit();
+//    print_r($_FILES);print_r($_POST);exit();
     
                 //check for required params present or not
                 verifyRequiredParams(array('name','email','password'));
@@ -39,15 +39,14 @@ $app->post('/register', function() use ($app){
                      $filename       =  $img_path;
                      
                      $filename_up    =  "../pics/".$filename;
-                     print_r('i m 1');
-                     $out  =   move_uploaded_file($image['tmp_name'],$filename_up);     
-                     print_r('i m 2');
+                     
+                     $out  =   move_uploaded_file($image['tmp_name'],$filename_up);                                          
                 }
-                print_r('i m 3a');
+                
                 $db   =  new DbHandler();
-                print_r('i m 3');
+                
                 $res    =  $db->createUser($name, $email, $password, $filename);
-                print_r('i m 4');exit();
+                
                 if($res == 'USER_CREATED_SUCCESSFULLY'){
                     $response['error']    =   FALSE;
                     $response['message']  =   'You are successfully registered';
