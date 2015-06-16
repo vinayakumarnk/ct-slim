@@ -43,7 +43,7 @@ $app->post('/register', function() use ($app){
                      $out  =   move_uploaded_file($image['tmp_name'],$filename_up);     
                      print_r('i m 2');
                 }
-                
+                print_r('i m 3a');
                 $db   =  new DbHandler();
                 print_r('i m 3');
                 $res    =  $db->createUser($name, $email, $password, $filename);
