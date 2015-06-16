@@ -13,6 +13,13 @@ class DbHandler{
         //opening db connection
         $db  =  new DbConnect();
         $this->conn = $db->connect();
+        if($this->conn){
+          print_r('conn success');exit();  
+        }
+        else{
+          print_r('conn fail');exit();  
+        }
+        
     }
     
     
