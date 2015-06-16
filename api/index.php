@@ -11,7 +11,7 @@ $app = new \Slim\Slim();
 //register
 $app->post('/register', function() use ($app){
     
-//    print_r($_FILES);print_r($_POST);exit();
+   print_r($_FILES);print_r($_POST);exit();
     
                 //check for required params present or not
                 verifyRequiredParams(array('name','email','password'));
