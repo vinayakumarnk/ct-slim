@@ -14,10 +14,10 @@ class DbHandler{
         $db  =  new DbConnect();
         $this->conn = $db->connect();
         if($this->conn){
-          print_r('conn success');exit();  
+          print_r('conn success');
         }
         else{
-          print_r('conn fail');exit();  
+          print_r('conn fail');
         }
         
     }
