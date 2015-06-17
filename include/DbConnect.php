@@ -15,8 +15,8 @@ class DbConnect{
 	* @return Database Connection handler
 	*/
 	function connect(){
-	
-		require_once dirname(__FILE__).'/Config.php';
+                 require_once './config.php';
+		//require_once dirname(__FILE__).'/Config.php';
 		
 		//connecting mysql database
 		$this->conn	=	new MySQLi(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
